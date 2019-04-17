@@ -1,5 +1,6 @@
 body {
 	font-family: monospace;
+	font-size: 1.7em;
 	color: #3d3522;
 	text-align: center;
 	text-transform: lowercase;
@@ -15,39 +16,43 @@ a:hover {
 	font-weight: 900;
 }
 
+h2 {
+	margin: 2em 0em 0.5em 0em;
+}
+
 #header {
-	width: 100%;
-	max-height: 300px;
-	font-size: 30px;
+	max-width: 100%;
+	margin-left: 15%;
 }
 
 #header h1 {
 	text-align: right;
 	color: #4a442d;
 	margin-top: 4em;
-	line-height: 0.7;
+	line-height: 1;
 	padding: 0px;
+	font-size: 3em;
 }
 
 #header h2 {
 	margin-top: -30px;
-	margin-left: 15%;
 	text-align: right;
-	font-size: 20px;
-	line-height: 0.7;
+	font-size: 1.3em;
+	line-height: 1;
 }
 
 #navbar {
 	width: 100%;
-	font-size: 1em;
-	height: 5em;
-	position: -webkit-sticky; /* Safari */
+	height: 3em;
+	position: -webkit-sticky;
+	/* Safari */
 	position: sticky;
 	top: 0;
 	background-color: #386150;
 	color: #caf7e2;
 	display: flex;
 	justify-content: flex-end;
+	z-index: 2;
 }
 
 #navbar ul {
@@ -70,25 +75,24 @@ a:hover {
 	color: #caf7e2;
 }
 
-#about-me {
-	height: auto;
-	width: 70%;
-	margin: auto;
-	margin-top: 15%;
-	margin-bottom: 15%;
-	align-content: center;
-}
-
-#information-pane img {
+#hero img {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	-webkit-filter: blur(2px);
+	filter: blur(2px);
 }
 
-#information-pane h2,
-p {
-	margin: auto;
-	padding-top: 10px;
+#hero {
+	position: relative;
+	overflow: auto;
+}
+
+#about-me {
+	position: absolute;
+	top: 0;
 }
 
 #gallery-content {
@@ -122,7 +126,7 @@ p {
 	padding: 2%;
 	min-width: 250px;
 	background: white;
-	height: 4em;
+	height: 3em;
 	box-sizing: border-box;
 	border: 1px solid #3d3522;
 	font: inherit;
@@ -135,8 +139,8 @@ p {
 }
 
 #submit-button {
-	height: 4em;
-	width: 10em;
+	height: 3em;
+	width: 6em;
 	border: none;
 	box-sizing: border-box;
 	border: 1px solid #3d3522;
@@ -191,17 +195,27 @@ input {
 /* ------------------------- */
 
 @media only screen and (max-width: 768px) {
+	
+	#hero {
+		font-size: 3vw;
+		margin: 0;
+		padding: 0;
+	}
 
 	img {
 		width: 100%;
 	}
-	
+
+	#navbar ul {
+		font-size: 0.8em;
+	}
+
 	#navbar ul {
 		margin-left: -50px;
-		
 	}
-	
-	#gallery-content, #contact {
+
+	#gallery-content,
+	#contact {
 		margin: 0;
 	}
 
